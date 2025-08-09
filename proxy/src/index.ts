@@ -18,8 +18,8 @@ export default {
 
 		if (pathParts.length === 4) {
 			const [tileset, zoom, x, y] = pathParts;
-			const origin = request.headers.get('host');
-			const sourceUrl = true
+			const referer = request.headers.get('Referer');
+			const sourceUrl = referer?.startsWith('https://www.openstreetmap.org/')
 				? `https://ps738.user.srcf.net/slope/${tileset}/${zoom}/${x}/${y}.webp`
 				: (parseInt(x) + parseInt(y)) % 2 === 0
 					? `https://ps738.user.srcf.net/slope/${tileset}/${zoom}/${x}/${y}.webp`
