@@ -11,11 +11,14 @@ jobs:
     name: Deploy
     steps:
       - uses: actions/checkout@v4
+      - name: Install dependencies
+        run: npm ci
+        working-directory: ./proxy
       - run: npm run prettier:check
         working-directory: ./proxy
       - name: Deploy
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          workingDirectory: proxy
+          workingDirectory: ./proxy
           command: deploy src/index.ts --config wrangler.jsonc
