@@ -29,6 +29,8 @@ I like that this setup has a fixed monthly cost, and it does not require me to m
 
 ## Contributing
 
-Do you have a tileset you would like to be hosted? Reach out at slopes4osm@protonmail.com, or [open an Issue](https://github.com/zabop/slopes4osm/issues/new). 
+Do you have a tileset you would like to be hosted? Reach out at slopes4osm@protonmail.com, or [open an Issue](https://github.com/zabop/slopes4osm/issues/new).
 
 You have a suggestion regarding proxying? A PR is welcome!
+
+Want to support this project by offering storage space? Anything else? Email us.
