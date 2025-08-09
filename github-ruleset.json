@@ -1,0 +1,26 @@
+{
+  "id": 7221794,
+  "name": "linear-history-no-force-push",
+  "target": "branch",
+  "source_type": "Repository",
+  "source": "zabop/slopes4osm",
+  "enforcement": "active",
+  "conditions": {
+    "ref_name": {
+      "exclude": [],
+      "include": ["~DEFAULT_BRANCH"]
+    }
+  },
+  "rules": [
+    {
+      "type": "deletion"
+    },
+    {
+      "type": "non_fast_forward"
+    },
+    {
+      "type": "required_linear_history"
+    }
+  ],
+  "bypass_actors": []
+}
