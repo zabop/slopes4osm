@@ -4,6 +4,7 @@
 	"private": true,
 	"scripts": {
 		"deploy": "wrangler deploy",
+		"prettier:check": "prettier --check \"*/**/*.{ts,tsx,js,jsx,css,html}\" --config .prettierrc",
 		"dev": "wrangler dev",
 		"start": "wrangler dev",
 		"test": "vitest",
