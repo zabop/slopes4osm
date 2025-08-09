@@ -16,4 +16,4 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           workingDirectory: proxy
-          command: deploy src/index.ts --config proxy/wrangler.jsonc
+          command: deploy src/index.ts --config wrangler.jsonc
