@@ -19,11 +19,11 @@ export default {
 		if (pathParts.length === 4) {
 			const [tileset, zoom, x, y] = pathParts;
 			const origin = request.headers.get('host');
-			const sourceUrl = origin?.startsWith('openstreetmap.org')
+			const sourceUrl = origin?.startsWith('https://openstreetmap.org')
 				? `https://ps738.user.srcf.net/slope/${tileset}/${zoom}/${x}/${y}.webp`
 				: (parseInt(x) + parseInt(y)) % 2 === 0
-					? `https://ps738.user.srcf.net/slope/${tileset}/${zoom}/${x}/${y}.webp`
-					: 'https://i.imgur.com/O3pTlRQ.png';
+				? `https://ps738.user.srcf.net/slope/${tileset}/${zoom}/${x}/${y}.webp`
+				: 'https://i.imgur.com/O3pTlRQ.png';
 
 			const resp = await fetch(sourceUrl, {
 				method: request.method,
