@@ -6,9 +6,13 @@ This project aims to provide beautiful slope visualisations for OpenStreetMap co
 
 **[Culebra Island, US](https://github.com/osmlab/editor-layer-index/blob/gh-pages/sources/north-america/us/pr/usgs-culebra-slope.geojson)**
 
+URL: `https://proxy.slopes4osm.workers.dev/us-pr/{zoom}/{x}/{y}`, minzoom: 11, maxzoom: 16.
+
 ![](https://i.imgur.com/jur1mFv.jpeg)
 
 **[Saint Barthélemy, France](https://github.com/osmlab/editor-layer-index/blob/gh-pages/sources/europe/fr/ign-bl-slope.geojson)**
+
+URL: `https://proxy.slopes4osm.workers.dev/fr-bl/{zoom}/{x}/{y}`, minzoom: 11, maxzoom: 16.
 
 ![](https://i.imgur.com/JFJ0E15.jpeg)
 
