@@ -13,6 +13,21 @@
 
 export default {
 	async fetch(request, env, ctx): Promise<Response> {
-		return new Response('Hello World!');
+		const url = new URL(request.url);
+		const pathParts = url.pathname.split('/').slice(1);
+
+		if (pathParts.length === 4) {
+			const [tileset, zoom, x, y] = pathParts;
+			const sourceUrl = `https://ps738.user.srcf.net/slope/${tileset}/${zoom}/${x}/${y}.webp`;
+
+			const resp = await fetch(sourceUrl, {
+				method: request.method,
+			});
+
+			return new Response(resp.body, {
+				status: resp.status,
+			});
+		}
+		return new Response('Hello slopes!');
 	},
 } satisfies ExportedHandler<Env>;
