@@ -22,8 +22,8 @@ export default {
 			const sourceUrl = origin?.startsWith('https://openstreetmap.org')
 				? `https://ps738.user.srcf.net/slope/${tileset}/${zoom}/${x}/${y}.webp`
 				: (parseInt(x) + parseInt(y)) % 2 === 0
-				? `https://ps738.user.srcf.net/slope/${tileset}/${zoom}/${x}/${y}.webp`
-				: 'https://i.imgur.com/O3pTlRQ.png';
+					? `https://ps738.user.srcf.net/slope/${tileset}/${zoom}/${x}/${y}.webp`
+					: 'https://i.imgur.com/O3pTlRQ.png';
 
 			const resp = await fetch(sourceUrl, {
 				method: request.method,
