@@ -12,6 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: npm run prettier:check
+        working-directory: ./proxy
       - name: Deploy
         uses: cloudflare/wrangler-action@v3
         with:
