@@ -26,3 +26,9 @@ I plan to move the tilesets to UpCloud. Their object storage offers 1TB of stora
 The Cloudflare proxy currently in use provides 100000 free invocations a day (after that, it's cut off, ie no extra charge).
 
 I like that this setup has a fixed monthly cost, and it does not require me to maintain servers. I hope this project becomes an [OpenStreetMap US Community Project](https://openstreetmap.us/our-work/community-charter-projects/) to cover the costs.
+
+## Contributing
+
+Do you have a tileset you would like to be hosted? Reach out at slopes4osm@protonmail.com, or [open an Issue](https://github.com/zabop/slopes4osm/issues/new). 
+
+You have a suggestion regarding proxying? A PR is welcome!
