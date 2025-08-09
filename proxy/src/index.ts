@@ -19,14 +19,11 @@ export default {
 		if (pathParts.length === 4) {
 			const [tileset, zoom, x, y] = pathParts;
 			const origin = request.headers.get('host');
-			const allowedOriginPattern =
-				/^https?:\/\/(.*\.freemap\.sk(:\d+)?|mapcomplete\.org|every-door\.app|www\.systemed\.net(:\d+)?|preview\.ideditor\.com(:\d+)?|ideditor\.openstreetmap\.org(:\d+)?)$/;
-			const sourceUrl =
-				origin && allowedOriginPattern.test(origin)
+			const sourceUrl = true
+				? `https://ps738.user.srcf.net/slope/${tileset}/${zoom}/${x}/${y}.webp`
+				: (parseInt(x) + parseInt(y)) % 2 === 0
 					? `https://ps738.user.srcf.net/slope/${tileset}/${zoom}/${x}/${y}.webp`
-					: (parseInt(x) + parseInt(y)) % 2 === 0
-						? `https://ps738.user.srcf.net/slope/${tileset}/${zoom}/${x}/${y}.webp`
-						: 'https://i.imgur.com/O3pTlRQ.png';
+					: 'https://i.imgur.com/O3pTlRQ.png';
 
 			const resp = await fetch(sourceUrl, {
 				method: request.method,
