@@ -28,6 +28,6 @@ export default {
 				status: resp.status,
 			});
 		}
-		return new Response('Hello slopes!');
+		return new Response('Visit https://github.com/zabop/slopes4osm.');
 	},
 } satisfies ExportedHandler<Env>;
